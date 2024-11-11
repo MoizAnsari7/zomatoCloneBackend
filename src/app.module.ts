@@ -6,6 +6,7 @@ import { AuthModule } from './auth/auth.module';
 import { RestaurantModule } from './restaurant/restaurant.module';
 import { UserModule } from './user/user.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { FoodModule } from './food/food.module';
 
 @Module({
   imports: [
@@ -18,7 +19,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       database: 'zomato_clone_db',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
-    }), AuthModule, UserModule, RestaurantModule],
+    }), AuthModule, UserModule, RestaurantModule, FoodModule],
   controllers: [AppController],
   providers: [AppService],
 })
