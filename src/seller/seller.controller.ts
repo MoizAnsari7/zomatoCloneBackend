@@ -1,9 +1,8 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, Delete, Put } from '@nestjs/common';
 import { SellerService } from './seller.service';
-import { CreateSellerDto } from './dto/create-seller.dto';
-import { UpdateSellerDto } from './dto/update-seller.dto';
+import { CreateSellerDto, UpdateSellerDto } from './dto';
 
-@Controller('seller')
+@Controller('sellers')
 export class SellerController {
   constructor(private readonly sellerService: SellerService) {}
 
@@ -19,16 +18,16 @@ export class SellerController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.sellerService.findOne(+id);
+    return this.sellerService.findOne(id);
   }
 
-  @Patch(':id')
+  @Put(':id')
   update(@Param('id') id: string, @Body() updateSellerDto: UpdateSellerDto) {
-    return this.sellerService.update(+id, updateSellerDto);
+    return this.sellerService.update(id, updateSellerDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.sellerService.remove(+id);
+    return this.sellerService.remove(id);
   }
 }
