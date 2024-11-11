@@ -1,0 +1,69 @@
+Project Structure
+
+
+.
+├── src/
+│   ├── auth/
+│   │   ├── auth.controller.ts
+│   │   ├── auth.service.ts
+│   │   ├── auth.module.ts
+│   │   ├── jwt.strategy.ts
+│   │   ├── local.strategy.ts
+│   │   └── guards/
+│   │       └── jwt-auth.guard.ts
+│   │
+│   ├── user/
+│   │   ├── user.controller.ts
+│   │   ├── user.service.ts
+│   │   ├── user.module.ts
+│   │   └── user.entity.ts
+│   │
+│   ├── seller/
+│   │   ├── seller.controller.ts
+│   │   ├── seller.service.ts
+│   │   ├── seller.module.ts
+│   │   └── seller.entity.ts
+│   │
+│   ├── restaurant/
+│   │   ├── restaurant.controller.ts
+│   │   ├── restaurant.service.ts
+│   │   ├── restaurant.module.ts
+│   │   └── restaurant.entity.ts
+│   │
+│   ├── food/
+│   │   ├── food.controller.ts
+│   │   ├── food.service.ts
+│   │   ├── food.module.ts
+│   │   └── food.entity.ts
+│   │
+│   ├── order/
+│   │   ├── order.controller.ts
+│   │   ├── order.service.ts
+│   │   ├── order.module.ts
+│   │   └── order.entity.ts
+│   │
+│   ├── review/
+│   │   ├── review.controller.ts
+│   │   ├── review.service.ts
+│   │   ├── review.module.ts
+│   │   └── review.entity.ts
+│   │
+│   ├── category/
+│   │   ├── category.controller.ts
+│   │   ├── category.service.ts
+│   │   ├── category.module.ts
+│   │   └── category.entity.ts
+│   │
+│   ├── common/
+│   │   ├── decorators/
+│   │   ├── exceptions/
+│   │   ├── filters/
+│   │   └── interfaces/
+│   │
+│   ├── app.controller.ts
+│   ├── app.module.ts
+│   └── main.ts
+│
+├── ormconfig.ts
+├── tsconfig.json
+└── package.json
